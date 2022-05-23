@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  QRViewController.swift
 //  Alamo-fire
 //
 //  Created by Abhilash k George on 23/05/22.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QRViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+     //   self.view.backgroundColor = .red
     }
 
-
 }
-
