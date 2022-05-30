@@ -30,36 +30,37 @@ class HomeScreenTableViewCell: UITableViewCell {
             flowLayout.itemSize = CGSize(width: 382, height: 215)
             flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
             flowLayout.scrollDirection = .horizontal
-            
-        } else if indexPath == 1 {
-            self.secondCV.setCollectionViewLayout(flowLayout, animated: false)
-            self.secondCV.delegate = self
-            self.secondCV.dataSource = self
-            flowLayout.itemSize = CGSize(width: 165, height: 25)
-            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0)
-            flowLayout.scrollDirection = .horizontal
+                
+            } else if indexPath == 1 {
+                self.secondCV.setCollectionViewLayout(flowLayout, animated: false)
+                self.secondCV.delegate = self
+                self.secondCV.dataSource = self
+                flowLayout.itemSize = CGSize(width: 350, height: 110)
+                flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+                flowLayout.scrollDirection = .horizontal
             
         } else if indexPath == 2 {
             self.thirdCV.setCollectionViewLayout(flowLayout, animated: false)
             self.thirdCV.delegate = self
             self.thirdCV.dataSource = self
-            flowLayout.itemSize = CGSize(width: 142, height: 138)
-            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0)
+            flowLayout.itemSize = CGSize(width: 119, height: 119)
+            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
             flowLayout.scrollDirection = .horizontal
-            
+
         } else  if indexPath == 3{
             self.fourthCV.setCollectionViewLayout(flowLayout, animated: false)
             self.fourthCV.delegate = self
             self.fourthCV.dataSource = self
-            flowLayout.itemSize = CGSize(width: 289, height: 229)
-            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0)
+            flowLayout.itemSize = CGSize(width: 351, height: 120)
+            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16
+                                                   , bottom: 0, right: 0)
             flowLayout.scrollDirection = .horizontal
         } else {
             self.fifthCV.setCollectionViewLayout(flowLayout, animated: false)
             self.fifthCV.delegate = self
             self.fifthCV.dataSource = self
-            flowLayout.itemSize = CGSize(width: 289, height: 229)
-            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 0)
+            flowLayout.itemSize = CGSize(width: 185, height: 46)
+            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
             flowLayout.scrollDirection = .horizontal
         }
     }
@@ -90,30 +91,34 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "firstCV", for: indexPath) as! HomeScreenCollectionViewCell
-        return cell
-//        if indexPath.row == 0 {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "firstCV", for: indexPath) as! HomeScreenCollectionViewCell
-//            return cell
-//        } else if collectionView == secondCV {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "secondCV", for: indexPath) as! HomeScreenCollectionViewCell
-//            return cell
-//        }
-//        else if collectionView == thirdCV {
-//
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "thirdCV", for: indexPath) as! HomeScreenCollectionViewCell
-//            return cell
-//
-//        } else if collectionView == fourthCV {
-//
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fourthCV", for: indexPath) as! HomeScreenCollectionViewCell
-//            return cell
-//        } else {
-//
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fifthCV", for: indexPath) as! HomeScreenCollectionViewCell
-//            return cell
-//        }
-        
+
+        if collectionView == firstCV {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "firstCV", for: indexPath) as! HomeScreenCollectionViewCell
+            return cell
+        } else if collectionView == secondCV {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "secondCV", for: indexPath) as! HomeScreenCollectionViewCell
+            return cell
+        }
+        else if collectionView == thirdCV {
+            if indexPath.row == 0 {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "thirdCV", for: indexPath) as! HomeScreenCollectionViewCell
+                return cell
+            } else {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "thirdPartCV", for: indexPath) as! HomeScreenCollectionViewCell
+                return cell
+            }
+
+            
+
+        } else if collectionView == fourthCV {
+
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fourthCV", for: indexPath) as! HomeScreenCollectionViewCell
+            return cell
+        } else {
+
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fifthCV", for: indexPath) as! HomeScreenCollectionViewCell
+            return cell
+        }
         
     }
 }
