@@ -14,6 +14,11 @@ class HomeScreenTableViewCell: UITableViewCell {
     @IBOutlet weak var thirdCV: UICollectionView!
     @IBOutlet weak var fourthCV: UICollectionView!
     @IBOutlet weak var fifthCV: UICollectionView!
+
+    @IBOutlet weak var firstPageControl: UIPageControl!
+
+    @IBOutlet weak var secondPageControl: UIPageControl!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -44,8 +49,12 @@ class HomeScreenTableViewCell: UITableViewCell {
             self.thirdCV.delegate = self
             self.thirdCV.dataSource = self
             flowLayout.itemSize = CGSize(width: 119, height: 119)
-            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            flowLayout.minimumLineSpacing = 0
+            flowLayout.minimumInteritemSpacing = 0
+            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 55, right: 0)
             flowLayout.scrollDirection = .horizontal
+            thirdCV.collectionViewLayout = flowLayout
+            
 
         } else  if indexPath == 3{
             self.fourthCV.setCollectionViewLayout(flowLayout, animated: false)
@@ -60,9 +69,14 @@ class HomeScreenTableViewCell: UITableViewCell {
             self.fifthCV.delegate = self
             self.fifthCV.dataSource = self
             flowLayout.itemSize = CGSize(width: 185, height: 46)
-            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
             flowLayout.scrollDirection = .horizontal
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        firstPageControl.currentPage = indexPath.row
+//        secondPageControl.currentPage = indexPath.row
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -86,7 +100,7 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         }else if collectionView == fourthCV {
             return 4
         } else {
-            return 8
+            return 5
         }
     }
     
@@ -97,6 +111,23 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
             return cell
         } else if collectionView == secondCV {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "secondCV", for: indexPath) as! HomeScreenCollectionViewCell
+            cell.contentView.backgroundColor = .white
+            cell.layer.cornerRadius = 15.0
+            cell.layer.borderWidth = 5.0
+            cell.layer.borderColor = UIColor.clear.cgColor
+            cell.layer.masksToBounds = true
+            cell.contentView.layer.cornerRadius = 15.0
+            cell.contentView.layer.borderWidth = 1.0
+            cell.contentView.layer.borderColor = UIColor.borderShadowColour.cgColor
+            cell.contentView.layer.masksToBounds = true
+            cell.layer.shadowColor = UIColor.white.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: 0.0)
+            cell.layer.shadowRadius = 6.0
+            cell.layer.shadowOpacity = 0.6
+            cell.layer.cornerRadius = 15.0
+            cell.layer.masksToBounds = false
+            cell.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
+
             return cell
         }
         else if collectionView == thirdCV {
@@ -113,6 +144,8 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         } else if collectionView == fourthCV {
 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fourthCV", for: indexPath) as! HomeScreenCollectionViewCell
+            cell.contentView.layer.cornerRadius = 15.0
+            cell.layer.cornerRadius = 15.0
             return cell
         } else {
 

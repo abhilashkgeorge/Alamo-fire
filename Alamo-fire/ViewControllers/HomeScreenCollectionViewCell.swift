@@ -10,4 +10,5 @@ import UIKit
 class HomeScreenCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var firstCVImg: UIImageView!
+    
 }

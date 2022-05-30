@@ -9,16 +9,18 @@ let apiManager = ApiManager()
 
 class HomeViewController: UIViewController {
     
+   
     @IBOutlet weak var homeTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         apiManager.getRequestWithAlamoFire()
         homeTableView.delegate = self
         homeTableView.dataSource = self
     }
 }
-
+ 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,7 +65,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         else if indexPath.row == 2 {
-            return 480
+            return 400
         } else {
             return 230
         }

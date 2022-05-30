@@ -20,5 +20,9 @@ extension UIColor {
     public class var tabBarGrey: UIColor {
         return UIColor(red: 122/255, green: 122/255, blue: 122/255, alpha: 1.0)
     }
+    //rgb(228,228,228)
+    public class var borderShadowColour: UIColor {
+        return UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1.0)
+    }
 }
 
