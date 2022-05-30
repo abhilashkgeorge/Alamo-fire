@@ -12,5 +12,19 @@ class FavouritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     //    self.view?.backgroundColor = .green
+        
+        let title = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        title.text = "Favorites"
+        title.textAlignment = .center
+        title.center = view.center
+        view.addSubview(title)
+        
+        title.font = .boldSystemFont(ofSize: 24)
+        
+        title.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            title.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+            title.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 30),])
     }
 }

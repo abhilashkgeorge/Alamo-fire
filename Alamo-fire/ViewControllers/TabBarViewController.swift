@@ -12,13 +12,18 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        let homeVC = HomeViewController()
+        
+        let sb = UIStoryboard(name: "Home", bundle: nil)
+        let homeVC = sb.instantiateViewController(withIdentifier: "HomeViewController")
+//        self.present(vc, animated: true, completion: nil)
+//        let homeVC = HomeViewController()
         let qrVC = QRViewController()
         let favouritesVC = FavouritesViewController()
         let notificationsVC = NotificationsViewController()
         view.backgroundColor = .white
 
         self.setViewControllers([homeVC, qrVC, favouritesVC, notificationsVC], animated: false)
+
         
         guard let items = self.tabBar.items else {
             return
@@ -33,6 +38,8 @@ class TabBarViewController: UITabBarController {
             items[value].image = UIImage(named: images[value])
         }
         
+        
+        self.tabBar.unselectedItemTintColor = UIColor.tabBarGrey
         self.tabBar.tintColor = UIColor.tabBarNavy
         
         

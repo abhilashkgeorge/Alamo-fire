@@ -17,4 +17,8 @@ class ApiManager {
             debugPrint(response)
         }
     }
+    
+    func postRequestWithAlamoFire() {
+        
+    }
 }
