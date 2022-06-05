@@ -15,8 +15,7 @@ class TabBarViewController: UITabBarController {
         
         let sb = UIStoryboard(name: "Home", bundle: nil)
         let homeVC = sb.instantiateViewController(withIdentifier: "HomeViewController")
-//        self.present(vc, animated: true, completion: nil)
-//        let homeVC = HomeViewController()
+
         let qrVC = QRViewController()
         let favouritesVC = FavouritesViewController()
         let notificationsVC = NotificationsViewController()

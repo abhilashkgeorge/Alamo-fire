@@ -10,6 +10,7 @@
 		F51EA982284165000035D78F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51EA981284164FF0035D78F /* Home.storyboard */; };
 		F536BFC228449A5A00A7FA41 /* HomeScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F536BFC128449A5A00A7FA41 /* HomeScreenTableViewCell.swift */; };
 		F536BFC428449D6900A7FA41 /* HomeScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F536BFC328449D6900A7FA41 /* HomeScreenCollectionViewCell.swift */; };
+		F536BFC62847590B00A7FA41 /* DynamicHeightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F536BFC52847590A00A7FA41 /* DynamicHeightCollectionView.swift */; };
 		F54E0CF6283B5C2B00359820 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E0CF5283B5C2B00359820 /* AppDelegate.swift */; };
 		F54E0CF8283B5C2B00359820 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E0CF7283B5C2B00359820 /* SceneDelegate.swift */; };
 		F54E0CFA283B5C2B00359820 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E0CF9283B5C2B00359820 /* HomeViewController.swift */; };
@@ -31,6 +32,12 @@
 		F58D0731283F50F200C39582 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F58D072F283F50F200C39582 /* SF-Pro-Display-Light.otf */; };
 		F58D0732283F50F200C39582 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F58D0730283F50F200C39582 /* SF-Pro-Text-Bold.otf */; };
 		F58D0734283F892D00C39582 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58D0733283F892D00C39582 /* UIButton+Ext.swift */; };
+		F593AD722848D9FB00438FC6 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593AD712848D9FB00438FC6 /* ContactViewController.swift */; };
+		F593AD752848DA1D00438FC6 /* contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F593AD742848DA1D00438FC6 /* contact.storyboard */; };
+		F593AD772849ABF600438FC6 /* ContactModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = F593AD762849ABF600438FC6 /* ContactModel .swift */; };
+		F593AD792849AF3900438FC6 /* URL+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593AD782849AF3900438FC6 /* URL+Extention.swift */; };
+		F593AD7B2849B13D00438FC6 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593AD7A2849B13D00438FC6 /* ContactViewModel.swift */; };
+		F593AD7D2849B71800438FC6 /* ContactNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593AD7C2849B71800438FC6 /* ContactNetworkManager.swift */; };
 		F5EC7FAB0F01C9C30D05B27C /* Pods_Alamo_fire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F86AA1A938321808AF649FD4 /* Pods_Alamo_fire.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +47,7 @@
 		F51EA981284164FF0035D78F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		F536BFC128449A5A00A7FA41 /* HomeScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTableViewCell.swift; sourceTree = "<group>"; };
 		F536BFC328449D6900A7FA41 /* HomeScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		F536BFC52847590A00A7FA41 /* DynamicHeightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionView.swift; sourceTree = "<group>"; };
 		F54E0CF2283B5C2B00359820 /* Alamo-fire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alamo-fire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54E0CF5283B5C2B00359820 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F54E0CF7283B5C2B00359820 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +71,12 @@
 		F58D072F283F50F200C39582 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
 		F58D0730283F50F200C39582 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		F58D0733283F892D00C39582 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		F593AD712848D9FB00438FC6 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		F593AD742848DA1D00438FC6 /* contact.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = contact.storyboard; sourceTree = "<group>"; };
+		F593AD762849ABF600438FC6 /* ContactModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContactModel .swift"; sourceTree = "<group>"; };
+		F593AD782849AF3900438FC6 /* URL+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extention.swift"; sourceTree = "<group>"; };
+		F593AD7A2849B13D00438FC6 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		F593AD7C2849B71800438FC6 /* ContactNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactNetworkManager.swift; sourceTree = "<group>"; };
 		F86AA1A938321808AF649FD4 /* Pods_Alamo_fire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alamo_fire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -116,14 +130,13 @@
 		F54E0CF4283B5C2B00359820 /* Alamo-fire */ = {
 			isa = PBXGroup;
 			children = (
+				F593AD702848720400438FC6 /* System */,
+				F593AD6C2848719C00438FC6 /* Custom */,
 				F58D0728283F4FA700C39582 /* Fonts */,
 				F58D0721283F431500C39582 /* StoryBoards */,
 				F58D070F283B8EEF00C39582 /* ViewControllers */,
 				F58D070C283B5CC200C39582 /* ApiManager */,
 				F58D071A283BBC6900C39582 /* Extentions */,
-				F54E0CF5283B5C2B00359820 /* AppDelegate.swift */,
-				F54E0CF7283B5C2B00359820 /* SceneDelegate.swift */,
-				F54E0CFE283B5C2D00359820 /* Assets.xcassets */,
 				F54E0D03283B5C2D00359820 /* Info.plist */,
 			);
 			path = "Alamo-fire";
@@ -133,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				F58D070D283B5CD500C39582 /* ApiManager.swift */,
+				F593AD782849AF3900438FC6 /* URL+Extention.swift */,
 			);
 			path = ApiManager;
 			sourceTree = "<group>";
@@ -140,14 +154,12 @@
 		F58D070F283B8EEF00C39582 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F58D0724283F4DFC00C39582 /* LoginViewController.swift */,
-				F58D0718283BA97100C39582 /* TabBarViewController.swift */,
-				F54E0CF9283B5C2B00359820 /* HomeViewController.swift */,
-				F58D0710283B8F5700C39582 /* QRViewController.swift */,
-				F58D0712283B8F6800C39582 /* FavouritesViewController.swift */,
-				F58D0714283B8F7B00C39582 /* NotificationsViewController.swift */,
-				F536BFC128449A5A00A7FA41 /* HomeScreenTableViewCell.swift */,
-				F536BFC328449D6900A7FA41 /* HomeScreenCollectionViewCell.swift */,
+				F593AD6B2848718300438FC6 /* Login */,
+				F593AD6A2848715C00438FC6 /* Home */,
+				F593AD6D284871C900438FC6 /* QR */,
+				F593AD6E284871D200438FC6 /* Favorites */,
+				F593AD6F284871DB00438FC6 /* Notification */,
+				F593AD732848DA0300438FC6 /* Contact */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -169,6 +181,7 @@
 				F54E0CFB283B5C2B00359820 /* Main.storyboard */,
 				F54E0D00283B5C2D00359820 /* LaunchScreen.storyboard */,
 				F51EA981284164FF0035D78F /* Home.storyboard */,
+				F593AD742848DA1D00438FC6 /* contact.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -183,6 +196,78 @@
 				F58D0730283F50F200C39582 /* SF-Pro-Text-Bold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F593AD6A2848715C00438FC6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F54E0CF9283B5C2B00359820 /* HomeViewController.swift */,
+				F536BFC128449A5A00A7FA41 /* HomeScreenTableViewCell.swift */,
+				F536BFC328449D6900A7FA41 /* HomeScreenCollectionViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F593AD6B2848718300438FC6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F58D0724283F4DFC00C39582 /* LoginViewController.swift */,
+				F58D0718283BA97100C39582 /* TabBarViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F593AD6C2848719C00438FC6 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				F536BFC52847590A00A7FA41 /* DynamicHeightCollectionView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		F593AD6D284871C900438FC6 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				F58D0710283B8F5700C39582 /* QRViewController.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		F593AD6E284871D200438FC6 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				F58D0712283B8F6800C39582 /* FavouritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		F593AD6F284871DB00438FC6 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				F58D0714283B8F7B00C39582 /* NotificationsViewController.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		F593AD702848720400438FC6 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				F54E0CF5283B5C2B00359820 /* AppDelegate.swift */,
+				F54E0CF7283B5C2B00359820 /* SceneDelegate.swift */,
+				F54E0CFE283B5C2D00359820 /* Assets.xcassets */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		F593AD732848DA0300438FC6 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				F593AD712848D9FB00438FC6 /* ContactViewController.swift */,
+				F593AD762849ABF600438FC6 /* ContactModel .swift */,
+				F593AD7A2849B13D00438FC6 /* ContactViewModel.swift */,
+				F593AD7C2849B71800438FC6 /* ContactNetworkManager.swift */,
+			);
+			path = Contact;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +339,7 @@
 				F58D072E283F50E300C39582 /* SF-Pro-Text-Medium.otf in Resources */,
 				F58D0731283F50F200C39582 /* SF-Pro-Display-Light.otf in Resources */,
 				F54E0CFD283B5C2B00359820 /* Main.storyboard in Resources */,
+				F593AD752848DA1D00438FC6 /* contact.storyboard in Resources */,
 				F58D0732283F50F200C39582 /* SF-Pro-Text-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,16 +394,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F58D0719283BA97100C39582 /* TabBarViewController.swift in Sources */,
+				F593AD722848D9FB00438FC6 /* ContactViewController.swift in Sources */,
 				F58D0713283B8F6800C39582 /* FavouritesViewController.swift in Sources */,
+				F536BFC62847590B00A7FA41 /* DynamicHeightCollectionView.swift in Sources */,
 				F58D070E283B5CD500C39582 /* ApiManager.swift in Sources */,
 				F58D0711283B8F5700C39582 /* QRViewController.swift in Sources */,
 				F54E0CFA283B5C2B00359820 /* HomeViewController.swift in Sources */,
+				F593AD7D2849B71800438FC6 /* ContactNetworkManager.swift in Sources */,
 				F536BFC228449A5A00A7FA41 /* HomeScreenTableViewCell.swift in Sources */,
+				F593AD7B2849B13D00438FC6 /* ContactViewModel.swift in Sources */,
 				F54E0CF6283B5C2B00359820 /* AppDelegate.swift in Sources */,
 				F58D0727283F4E3300C39582 /* UIColour+Ext.swift in Sources */,
+				F593AD772849ABF600438FC6 /* ContactModel .swift in Sources */,
 				F58D0715283B8F7B00C39582 /* NotificationsViewController.swift in Sources */,
 				F536BFC428449D6900A7FA41 /* HomeScreenCollectionViewCell.swift in Sources */,
 				F54E0CF8283B5C2B00359820 /* SceneDelegate.swift in Sources */,
+				F593AD792849AF3900438FC6 /* URL+Extention.swift in Sources */,
 				F58D0720283C8F9400C39582 /* UIImage+Ext.swift in Sources */,
 				F58D0725283F4DFC00C39582 /* LoginViewController.swift in Sources */,
 				F58D0734283F892D00C39582 /* UIButton+Ext.swift in Sources */,

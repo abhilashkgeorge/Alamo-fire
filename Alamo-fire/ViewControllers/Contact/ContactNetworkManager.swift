@@ -1,16 +1,16 @@
 //
-//  ApiManager.swift
+//  ContactNetworkManager.swift
 //  Alamo-fire
 //
-//  Created by Abhilash k George on 23/05/22.
+//  Created by Abhilash k George on 03/06/22.
 //
 
 import Foundation
 import Alamofire
 
-class ApiManager {
+class ContactNetworkManager {
     
-    func getcontactDetais(completionHandler: @escaping (_ json: [String: Any]) -> Void) {
+    func getRequestWithAlamoFire(completionHandler: @escaping (_ json: [String: Any]) -> Void) {
         let url = URL.fetchURLForContactData()
         AF.request(url).response { response in
             guard let response = response.data else {
@@ -23,7 +23,7 @@ class ApiManager {
             }
             
             else {
-                print("Error getting Data from API!")
+                print("error")
             }
             
         }

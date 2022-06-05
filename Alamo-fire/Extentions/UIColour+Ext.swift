@@ -24,5 +24,9 @@ extension UIColor {
     public class var borderShadowColour: UIColor {
         return UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1.0)
     }
+    //rgb(1,83,154)
+    public class var buttonHighlightedColor: UIColor {
+        return UIColor(red: 1/255, green: 83/255, blue: 154/255, alpha: 1.0)
+    }
 }
 

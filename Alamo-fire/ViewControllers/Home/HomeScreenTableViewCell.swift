@@ -21,6 +21,7 @@ class HomeScreenTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
     
@@ -30,54 +31,70 @@ class HomeScreenTableViewCell: UITableViewCell {
         
         if indexPath == 0 {
             self.firstCV.setCollectionViewLayout(flowLayout, animated: false)
+            self.firstCV.showsHorizontalScrollIndicator = false
             self.firstCV.delegate = self
             self.firstCV.dataSource = self
+            self.firstCV.reloadData()
+            self.firstCV.layoutIfNeeded()
             flowLayout.itemSize = CGSize(width: 382, height: 215)
-            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+            flowLayout.minimumInteritemSpacing = 0
+            flowLayout.minimumLineSpacing = 0
             flowLayout.scrollDirection = .horizontal
                 
             } else if indexPath == 1 {
                 self.secondCV.setCollectionViewLayout(flowLayout, animated: false)
+                self.secondCV.showsHorizontalScrollIndicator = false
                 self.secondCV.delegate = self
                 self.secondCV.dataSource = self
+                self.secondCV.reloadData()
+                self.secondCV.layoutIfNeeded()
                 flowLayout.itemSize = CGSize(width: 350, height: 110)
-                flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
+                flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 20)
                 flowLayout.scrollDirection = .horizontal
             
         } else if indexPath == 2 {
             self.thirdCV.setCollectionViewLayout(flowLayout, animated: false)
+            self.thirdCV.showsHorizontalScrollIndicator = false
             self.thirdCV.delegate = self
             self.thirdCV.dataSource = self
+            self.thirdCV.reloadData()
+            self.thirdCV.layoutIfNeeded()
             flowLayout.itemSize = CGSize(width: 119, height: 119)
-            flowLayout.minimumLineSpacing = 0
-            flowLayout.minimumInteritemSpacing = 0
-            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 55, right: 0)
+            flowLayout.minimumInteritemSpacing = 11.5
+            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 20, right: 16)
+           flowLayout.minimumLineSpacing = 12.5
             flowLayout.scrollDirection = .horizontal
             thirdCV.collectionViewLayout = flowLayout
             
 
         } else  if indexPath == 3{
             self.fourthCV.setCollectionViewLayout(flowLayout, animated: false)
+            self.fourthCV.showsHorizontalScrollIndicator = false
             self.fourthCV.delegate = self
             self.fourthCV.dataSource = self
+            self.fourthCV.reloadData()
+            self.fourthCV.layoutIfNeeded()
             flowLayout.itemSize = CGSize(width: 351, height: 120)
             flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16
                                                    , bottom: 0, right: 0)
             flowLayout.scrollDirection = .horizontal
         } else {
             self.fifthCV.setCollectionViewLayout(flowLayout, animated: false)
+            self.fifthCV.showsHorizontalScrollIndicator = false
             self.fifthCV.delegate = self
             self.fifthCV.dataSource = self
+            self.fifthCV.reloadData()
+            self.fifthCV.layoutIfNeeded()
             flowLayout.itemSize = CGSize(width: 185, height: 46)
-            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            flowLayout.sectionInset = UIEdgeInsets(top: 12, left: 16, bottom: 0, right: 16)
             flowLayout.scrollDirection = .horizontal
+            flowLayout.minimumLineSpacing = 10
+            flowLayout.minimumInteritemSpacing = 0
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        firstPageControl.currentPage = indexPath.row
-//        secondPageControl.currentPage = indexPath.row
-    }
+
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -94,15 +111,19 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         if collectionView == firstCV {
             return 2
         } else if collectionView == secondCV {
+            firstPageControl.numberOfPages = 4
             return 4
         } else if collectionView == thirdCV {
             return 8
         }else if collectionView == fourthCV {
+            secondPageControl.numberOfPages = 4
             return 4
         } else {
             return 5
         }
     }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
@@ -111,6 +132,7 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
             return cell
         } else if collectionView == secondCV {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "secondCV", for: indexPath) as! HomeScreenCollectionViewCell
+            firstPageControl.currentPage = 0
             cell.contentView.backgroundColor = .white
             cell.layer.cornerRadius = 15.0
             cell.layer.borderWidth = 5.0
@@ -142,7 +164,7 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
             
 
         } else if collectionView == fourthCV {
-
+            secondPageControl.currentPage = 0
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fourthCV", for: indexPath) as! HomeScreenCollectionViewCell
             cell.contentView.layer.cornerRadius = 15.0
             cell.layer.cornerRadius = 15.0
@@ -150,8 +172,17 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         } else {
 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fifthCV", for: indexPath) as! HomeScreenCollectionViewCell
+            
             return cell
         }
         
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let witdh = scrollView.frame.width - (scrollView.contentInset.left*2)
+        let index = scrollView.contentOffset.x / witdh
+        let roundedIndex = round(index)
+        self.firstPageControl?.currentPage = Int(roundedIndex)
+        self.secondPageControl?.currentPage = Int(roundedIndex)
     }
 }

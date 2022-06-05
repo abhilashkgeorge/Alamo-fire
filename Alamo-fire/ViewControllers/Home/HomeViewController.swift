@@ -15,7 +15,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        apiManager.getRequestWithAlamoFire()
+        apiManager.getcontactDetais(completionHandler: { json in
+            print(json)
+        }) 
         homeTableView.delegate = self
         homeTableView.dataSource = self
     }
@@ -65,9 +67,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         else if indexPath.row == 2 {
-            return 400
+            return 450
+        } else if indexPath.row == 3 {
+            return 200
+        } else if indexPath.row == 4 {
+            return 220
         } else {
-            return 230
+            return 200
         }
     }
 }

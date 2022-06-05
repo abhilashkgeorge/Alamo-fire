@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qn6-LA-o1z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4nS-I1-THU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -34,7 +34,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="414" id="A6d-1Y-L1s"/>
                                             <constraint firstAttribute="height" constant="896" id="mpO-Ft-TG2"/>
                                         </constraints>
                                     </view>
@@ -53,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="koI-sw-cI0">
-                                        <rect key="frame" x="44" y="555.5" width="74.5" height="21"/>
+                                        <rect key="frame" x="44" y="555.5" width="302" height="21"/>
                                         <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -178,7 +177,7 @@
                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Y1F-hl-Vkj">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="Y1F-hl-Vkj">
                                         <rect key="frame" x="169.5" y="317" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="Pio-j6-HhF"/>
@@ -204,6 +203,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Xcy-jw-biA" secondAttribute="trailing" constant="44" id="TAJ-I1-Ib2"/>
                                     <constraint firstItem="BHQ-UK-vws" firstAttribute="top" secondItem="uii-eH-KqM" secondAttribute="bottom" constant="30" id="Tr9-6e-s87"/>
                                     <constraint firstItem="6AP-Ar-2LY" firstAttribute="leading" secondItem="aK0-lV-Em4" secondAttribute="leading" id="UHN-5y-zLa"/>
+                                    <constraint firstItem="XEh-01-hha" firstAttribute="leading" secondItem="koI-sw-cI0" secondAttribute="trailing" constant="2" id="UbL-EO-keA"/>
                                     <constraint firstItem="Gb3-1O-idq" firstAttribute="top" secondItem="aK0-lV-Em4" secondAttribute="top" constant="65" id="Wpw-UO-rKA"/>
                                     <constraint firstItem="9Hh-ZF-lDV" firstAttribute="centerX" secondItem="aK0-lV-Em4" secondAttribute="centerX" id="XRm-Qi-wft"/>
                                     <constraint firstItem="x4P-js-6hg" firstAttribute="centerX" secondItem="aK0-lV-Em4" secondAttribute="centerX" id="Z2e-eC-OL6"/>
@@ -229,23 +229,46 @@
                         <constraints>
                             <constraint firstItem="aK0-lV-Em4" firstAttribute="trailing" secondItem="3pp-06-mby" secondAttribute="trailing" id="50J-h1-Jcp"/>
                             <constraint firstItem="aK0-lV-Em4" firstAttribute="leading" secondItem="3pp-06-mby" secondAttribute="leading" id="UKk-LG-Nsp"/>
+                            <constraint firstItem="6AP-Ar-2LY" firstAttribute="width" secondItem="Sfq-7d-dEm" secondAttribute="width" id="WPJ-jk-jeM"/>
                             <constraint firstItem="aK0-lV-Em4" firstAttribute="top" secondItem="Sfq-7d-dEm" secondAttribute="top" id="d6O-e2-MuB"/>
                             <constraint firstAttribute="bottom" secondItem="aK0-lV-Em4" secondAttribute="bottom" id="zMK-Nn-Yil"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="c1b-Ps-YdZ"/>
                     <connections>
                         <outlet property="emailLabel" destination="SEW-7j-Cdv" id="zKv-A0-pfB"/>
+                        <outlet property="loginButton" destination="uii-eH-KqM" id="iTO-zG-CyY"/>
+                        <outlet property="passwordLabel" destination="koI-sw-cI0" id="4Zl-1k-6np"/>
                         <outlet property="profileLogo" destination="Y1F-hl-Vkj" id="c8Q-YV-PvS"/>
                         <outlet property="welcomeMessageLabel" destination="x4P-js-6hg" id="ZRa-yg-C09"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pd-03-1fm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1715.9420289855075" y="-2.0089285714285712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KBB-Oq-njJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4nS-I1-THU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="d2d-81-ORI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qn6-LA-o1z" kind="relationship" relationship="rootViewController" id="w1g-Y7-UXg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wop-5J-bJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="805.79710144927537" y="-2.0089285714285712"/>
         </scene>
     </scenes>
     <resources>
         <image name="Button - Info" width="44" height="44"/>
+        <image name="Image-1" width="40" height="40"/>
         <image name="hide password" width="24" height="24"/>
         <image name="logo" width="140" height="137"/>
         <image name="star_bg" width="414" height="391"/>
