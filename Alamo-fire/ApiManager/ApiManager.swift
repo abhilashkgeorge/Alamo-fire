@@ -28,9 +28,4 @@ class ApiManager {
             
         }
     }
-    
-    
-    func postRequestWithAlamoFire() {
-        
-    }
 }

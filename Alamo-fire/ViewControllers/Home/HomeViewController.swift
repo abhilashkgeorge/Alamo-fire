@@ -9,20 +9,21 @@ let apiManager = ApiManager()
 
 class HomeViewController: UIViewController {
     
-   
+    
     @IBOutlet weak var homeTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        apiManager.getcontactDetais(completionHandler: { json in
-            print(json)
-        }) 
         homeTableView.delegate = self
         homeTableView.dataSource = self
+        configureNavigationBar()
+    }
+    func configureNavigationBar() {
+        navigationController?.navigationBar.isHidden = true
     }
 }
- 
+
+
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,16 +44,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "thirdTableCell") as! HomeScreenTableViewCell
             cell.configureCells(indexPath: indexPath.row)
             return cell
-
+            
         } else if indexPath.row == 3{
-
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "fourthTableCell") as! HomeScreenTableViewCell
             cell.configureCells(indexPath: indexPath.row)
             return cell
         }
         else if indexPath.row >= 4{
-
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "fifthTableCell") as! HomeScreenTableViewCell
+            cell.delegate = self
             cell.configureCells(indexPath: indexPath.row)
             return cell
         }
@@ -77,5 +79,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+
+
+extension HomeViewController: NavigationDelegate {
+    func didSelectItem(Address: String, phoneNumber: String, mailId: String) {
+        print("hello again")
+        let sb = UIStoryboard(name: "contact", bundle: .none)
+        let vc = sb.instantiateViewController(withIdentifier: "ContactViewController") as! ContactViewController
+      
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+
+    
+}
+    
+    
 
 

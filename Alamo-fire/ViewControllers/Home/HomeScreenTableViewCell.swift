@@ -7,8 +7,12 @@
 
 import UIKit
 
+protocol NavigationDelegate: AnyObject {
+    func didSelectItem(Address: String, phoneNumber: String, mailId: String)
+}
 class HomeScreenTableViewCell: UITableViewCell {
     
+    weak var delegate: NavigationDelegate?
     @IBOutlet weak var firstCV: UICollectionView!
     @IBOutlet weak var secondCV: UICollectionView!
     @IBOutlet weak var thirdCV: UICollectionView!
@@ -60,11 +64,10 @@ class HomeScreenTableViewCell: UITableViewCell {
             self.thirdCV.dataSource = self
             self.thirdCV.reloadData()
             self.thirdCV.layoutIfNeeded()
-            flowLayout.itemSize = CGSize(width: 119, height: 119)
+            flowLayout.itemSize = CGSize(width: contentView.bounds.width/3 - 20, height: contentView.bounds.height/3 - 20)
             flowLayout.minimumInteritemSpacing = 11.5
-            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 20, right: 16)
+            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
            flowLayout.minimumLineSpacing = 12.5
-            flowLayout.scrollDirection = .horizontal
             thirdCV.collectionViewLayout = flowLayout
             
 
@@ -86,15 +89,19 @@ class HomeScreenTableViewCell: UITableViewCell {
             self.fifthCV.dataSource = self
             self.fifthCV.reloadData()
             self.fifthCV.layoutIfNeeded()
-            flowLayout.itemSize = CGSize(width: 185, height: 46)
+            flowLayout.itemSize = CGSize(width: bounds.width/2 - 40 , height: 46)
             flowLayout.sectionInset = UIEdgeInsets(top: 12, left: 16, bottom: 0, right: 16)
-            flowLayout.scrollDirection = .horizontal
+           // flowLayout.scrollDirection = .horizontal
             flowLayout.minimumLineSpacing = 10
             flowLayout.minimumInteritemSpacing = 0
         }
     }
     
-
+    @IBAction func fifthVCbtnTapped(_ sender: Any) {
+        print("hi there")
+        delegate?.didSelectItem(Address: "hi", phoneNumber: "ji", mailId: "hi")
+    }
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -166,16 +173,32 @@ extension HomeScreenTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         } else if collectionView == fourthCV {
             secondPageControl.currentPage = 0
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fourthCV", for: indexPath) as! HomeScreenCollectionViewCell
+
             cell.contentView.layer.cornerRadius = 15.0
             cell.layer.cornerRadius = 15.0
             return cell
         } else {
 
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fifthCV", for: indexPath) as! HomeScreenCollectionViewCell
+            if indexPath.row == 4{
+                cell.fifthCVButton.setTitle("Contact Us", for: .normal)
+                cell.fifthCVButton.setImage(UIImage(named:  UIImage.AssetImages.headset.rawValue), for: .normal)
+            }
             
             return cell
         }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("HIhihihihihih")
+        if collectionView == fifthCV {
+            print("HIhihihihihih")
+        
+            if indexPath.row == 4 {
+               
+        }
+    }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

@@ -348,7 +348,7 @@ Rooms</string>
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="317"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bulletin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="np7-7s-TOo">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bulletin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="np7-7s-TOo">
                                                     <rect key="frame" x="20" y="0.0" width="73" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="WMO-Un-PuZ"/>
@@ -357,7 +357,7 @@ Rooms</string>
                                                     <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mru-Mv-1xj">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mru-Mv-1xj">
                                                     <rect key="frame" x="288" y="4.5" width="80" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="19" id="J3u-di-rNL"/>
@@ -368,10 +368,10 @@ Rooms</string>
                                                         <color key="baseForegroundColor" red="0.050980392159999999" green="0.29411764709999999" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     </buttonConfiguration>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="neY-h7-m3L">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="neY-h7-m3L">
                                                     <rect key="frame" x="368" y="8.5" width="26" height="11"/>
                                                 </imageView>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Fn-hW-yDl" customClass="DynamicHeightCollectionView" customModule="Alamo_fire" customModuleProvider="target">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Fn-hW-yDl" customClass="DynamicHeightCollectionView" customModule="Alamo_fire" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="40.5" width="414" height="120"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
@@ -387,17 +387,17 @@ Rooms</string>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fourthCV" id="Sah-8A-HSx" customClass="HomeScreenCollectionViewCell" customModule="Alamo_fire" customModuleProvider="target">
                                                             <rect key="frame" x="31.5" y="0.0" width="351" height="120"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cvC-Nh-HeM">
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="cvC-Nh-HeM">
                                                                 <rect key="frame" x="0.0" y="0.0" width="351" height="120"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nunc sed sem ultricies, vulputate odio quis,enim. accumsan temp…" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZZ-gA-Bnx">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nunc sed sem ultricies, vulputate odio quis,enim. accumsan temp…" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZZ-gA-Bnx">
                                                                         <rect key="frame" x="123.5" y="29.5" width="203.5" height="61"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="tak-zj-uoL">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="tak-zj-uoL">
                                                                         <rect key="frame" x="16.5" y="14.5" width="91" height="91"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="91" id="7OZ-hY-9XN"/>
@@ -418,7 +418,7 @@ Rooms</string>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
-                                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="ytf-C9-zxm">
+                                                <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="ytf-C9-zxm">
                                                     <rect key="frame" x="121" y="177" width="172.5" height="7"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="7" id="zam-0T-gkQ"/>
@@ -426,7 +426,7 @@ Rooms</string>
                                                     <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </pageControl>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="JKt-qC-Aa0">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="JKt-qC-Aa0">
                                                     <rect key="frame" x="368" y="8.5" width="6" height="11"/>
                                                 </imageView>
                                             </subviews>
@@ -460,7 +460,13 @@ Rooms</string>
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="218"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kMc-fq-trj" customClass="DynamicHeightCollectionView" customModule="Alamo_fire" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Quick Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1h-Bw-NeL">
+                                                    <rect key="frame" x="20" y="8" width="115" height="18"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="22"/>
+                                                    <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kMc-fq-trj" customClass="DynamicHeightCollectionView" customModule="Alamo_fire" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="38" width="414" height="180"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
@@ -476,20 +482,23 @@ Rooms</string>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fifthCV" id="mUN-cz-IOU" customClass="HomeScreenCollectionViewCell" customModule="Alamo_fire" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="185" height="46"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Vhg-5P-aVb">
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Vhg-5P-aVb">
                                                                 <rect key="frame" x="0.0" y="0.0" width="185" height="46"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnBg" translatesAutoresizingMaskIntoConstraints="NO" id="sJk-FE-tub">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="btnBg" translatesAutoresizingMaskIntoConstraints="NO" id="sJk-FE-tub">
                                                                         <rect key="frame" x="0.0" y="0.0" width="185" height="46"/>
                                                                     </imageView>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E56-w5-NcP">
+                                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E56-w5-NcP">
                                                                         <rect key="frame" x="0.0" y="0.0" width="185" height="46"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" image="alarm" title="Details" imagePadding="20">
                                                                             <fontDescription key="titleFontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="14"/>
                                                                             <color key="baseForegroundColor" red="0.050980392156862744" green="0.29411764705882354" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="fifthVCbtnTapped:" destination="e59-Qg-C13" eventType="touchUpInside" id="rUs-do-PAo"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
@@ -517,12 +526,6 @@ Rooms</string>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1h-Bw-NeL">
-                                                    <rect key="frame" x="20" y="8" width="115" height="18"/>
-                                                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="22"/>
-                                                    <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="R1h-Bw-NeL" firstAttribute="leading" secondItem="VGx-w8-yYQ" secondAttribute="leading" constant="20" id="B4H-vf-Q5x"/>

@@ -10,7 +10,7 @@ import Alamofire
 
 class ContactNetworkManager {
     
-    func getRequestWithAlamoFire(completionHandler: @escaping (_ json: [String: Any]) -> Void) {
+    func getcontactDetais(completionHandler: @escaping (_ json: [String: Any]) -> Void) {
         let url = URL.fetchURLForContactData()
         AF.request(url).response { response in
             guard let response = response.data else {
@@ -23,7 +23,7 @@ class ContactNetworkManager {
             }
             
             else {
-                print("error")
+                print("Error getting Data from API!")
             }
             
         }

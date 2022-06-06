@@ -18,6 +18,7 @@ extension UIImage {
         case alarm = "alarm"
         case profile = "face"
         case headset = "headset"
+        case backButton = "backButton"
     }
     
     var isPortrait:  Bool    { size.height > size.width }

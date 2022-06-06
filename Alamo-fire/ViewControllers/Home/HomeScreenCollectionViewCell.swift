@@ -7,9 +7,11 @@
 
 import UIKit
 
+
+
 class HomeScreenCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var fifthCVButton: UIButton!
     @IBOutlet weak var firstCVImg: UIImageView!
-    
+
 }

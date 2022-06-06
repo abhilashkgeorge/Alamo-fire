@@ -14,9 +14,9 @@ class ContactModel {
     let buildingName : String?
     let area : String?
     let city : String?
-    let pincode : String?
+    let pincode : Int?
     
-    init(contactNumber: String, emailId: String, buildingName: String, area: String, city: String, pincode: String) {
+    init(contactNumber: String, emailId: String, buildingName: String, area: String, city: String, pincode: Int) {
         self.contactNumber = contactNumber
         self.emailId = emailId
         self.buildingName = buildingName

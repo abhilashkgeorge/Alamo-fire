@@ -9,6 +9,7 @@ import Foundation
 
 class ContactViewModel {
     let apiManager = ApiManager()
+    let networkManager = ContactNetworkManager()
 
     func contactSerialization(json: Any) -> ContactModel {
         
@@ -19,7 +20,7 @@ class ContactViewModel {
         let buildingName = newJson!["buildingName"] as? String ?? "no buildingName"
         let area = newJson!["area"] as? String ?? "no area details"
         let city = newJson!["city"] as? String ?? "no city details"
-        let pincode = newJson!["pincode"] as? String ?? "no pincode"
+        let pincode = newJson!["pincode"] as? Int ?? 0000
      
         let contactData = ContactModel(contactNumber: contactNumber, emailId: emailId, buildingName: buildingName, area: area, city: city, pincode: pincode)
         
@@ -27,7 +28,7 @@ class ContactViewModel {
     }
     
     func contactData(completionHandler: @escaping (_ contactData: ContactModel) -> Void) {
-        apiManager.getcontactDetais(completionHandler: { json in
+        networkManager.getcontactDetais(completionHandler: { json in
             let details = self.contactSerialization(json: json)
              completionHandler(details)
         })

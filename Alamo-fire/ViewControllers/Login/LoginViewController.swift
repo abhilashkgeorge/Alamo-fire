@@ -13,21 +13,33 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var passwordLabel: UITextField!
     @IBOutlet weak var loginButton: LoginButton!
+    @IBOutlet weak var subView: UIView!
     
     
     let password = "admin"
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        subView.layer.cornerRadius = 12
+        subView.isHidden = true
         loginButton.backgroundColor = .tabBarNavy
         loginButton.layer.opacity = 0.5
         loginButton.layer.cornerRadius = 10
         passwordLabel.delegate = self
         welcomeMessageLabel.text = "Welcome Back Ashwin!"
         profileLogo.image = UIImage(named: UIImage.AssetImages.profile.rawValue)?.circleMasked
-
+        configureNavigationBar()
     }
-    
+    func configureNavigationBar() {        
+        navigationController?.navigationBar.isHidden = true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+          if touches.first?.view == subView{
+              // subView is your view
+              subView.isHidden = true
+              dismiss(animated: true, completion: nil)
+          }
+      }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     let text = (passwordLabel.text! as NSString).replacingCharacters(in: range, with: string)
     if text.isEmpty {
@@ -80,5 +92,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func infoButtonTapped(_ sender: Any) {
+        subView.isHidden = false
     }
+
 }
